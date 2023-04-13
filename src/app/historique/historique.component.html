@@ -1,0 +1,94 @@
+
+<div>
+  <div class="blc3"
+    style="border-radius: 5px;color: #000000;width: 98%; margin-left: 1.1%;padding-top: 1%; justify-content: center;">
+
+    <nav class="navbar navbar-light">
+      <div class="container" style="height: 54px;display: flex;">
+
+        <div class="text-center " (mouseenter)="showForm = true" (click)="showForm = false">
+      <p style="margin-top: 25px; color: white; font-size: 10px;" >Télécharger l'historique</p>
+  </div> <h1 class="text-center " style="margin-left: 250px;"> Historiques</h1>
+  <form style="margin-left:350px;">
+
+    <input (change)="calend($event)" class="form-control me-2" type="date" id="cal" name="calendrier">
+    <!--  -->
+  </form>
+      </div>
+    </nav>
+    <form *ngIf="showForm">
+      <label style="color: #91D333; background-color: #3A3A3A;" for="start-date">Du :</label>
+      <input type="date" id="start-date" [(ngModel)]="startDate" name="startDate">
+
+      <label style="color: #91D333; background-color: #3A3A3A;" for="end-date">Au :</label>
+      <input type="date" id="end-date" [(ngModel)]="endDate" name="endDate">
+
+      <button style="background-color: #3A3A3A; color:#91D333; font-family:Bold;" type="button" (click)="downloadPdf()">TELECHARGER</button>
+    </form>
+    <table class="table table-bordered border-black">
+      <div class="form-group col-md-3">
+
+      </div>
+      <thead>
+<tr>
+
+
+
+</tr>
+        <tr align="center" style="background-color: #91D333; color: white; ">
+
+          <th >Date</th>
+          <th>Heure </th>
+          <th>Température en °C</th>
+          <th>Humidite en %</th>
+          <th>Luminosité en lux</th>
+          <th>Humidité du sol en %</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr
+          *ngFor="let periode of filter_entree | paginate: {itemsPerPage:6, currentPage:page, totalItems:totalLenght };">
+
+          <td  align="center">{{periode.date}}</td>
+          <td align="center">{{periode.heure}}</td>
+          <td align="center">{{periode.temperature}}</td>
+          <td align="center">{{periode.humidite}} </td>
+          <td align="center">{{periode.lumiere}} </td>
+          <td align="center">{{periode.humidite_sol}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <!-- pagination -->
+    <div class="pagination fixed-bottom justify-content-center" >
+      <pagination-controls (pageChange)="page=$event"></pagination-controls>
+
+    </div>
+
+</div>
+
+
+
+<style>
+  .navbar{
+    border-radius: 5px;
+    border-color: #000000;
+    background-color: #3A3A3A;
+  }
+  h1{color:white;
+  }
+
+  h1
+{
+  font-size: 32px;
+  color: #91D333;
+
+  text-align:center;
+}
+  </style>
+
+
+
+
+
+

@@ -1,0 +1,113 @@
+<div class="global container">
+
+
+  <div class=" titre text-center">
+      <h1 class="text-white dark:text-dark-contrastText">Plateforme de Gestion de Serre automatisé </h1><br>
+
+  </div>
+
+<div class="general">
+<div class="V">
+  <div class="image">
+<img src="./assets/connect.jpg" alt="" class="img">
+  </div>
+  <div class="text-center"><h2 class="text-white">poser votre carte ici</h2> </div>
+  <div class="carte">
+    <img src="./assets/rfid.gif" alt="" class="img">
+  </div>
+</div>
+
+ <div class="corps">
+
+
+  <div class="connexion ">
+    <div class="">
+      <div class="A">
+
+        <div class="alert alert-danger h5 text-center" role="alert" *ngIf="eror ">
+          {{message}}
+        </div>
+        <div class="alerte alert-succes h3 text-center" role="alert" *ngIf="success ">
+          {{message}}
+        </div>
+        <div class="shadow border-0 ">
+
+          <div class=" px-lg-5 py-lg-5">
+
+            <div class="text-center  mb-4">
+              <h1 class="text-black dark:text-dark-contrastText">CONNEXION</h1>
+            </div>
+
+            <form role="form" class="format"  [formGroup]="registerForm" (ngSubmit)="loginUser()">
+              <label class="text-black dark:text-dark-contrastText" for="email">Email</label>
+              <div class="form-group mb-3 ">
+
+                <div class="input-group">
+
+
+                  <div class="input-group-prepend "
+                    [ngClass]="{'invalid':  (submitted || registerForm.controls['email'].dirty) && registerForm.controls['email'].errors}" type="email">
+
+                    <span class="input-group-text bd"><svg width="14" height="25" viewBox="0 0 13 14"
+                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12.7537 4.62292C12.8527 4.5099 13 4.61562 13 4.79427V12.25C13 13.2161 12.4541 14 11.7812 14H1.21875C0.545898 14 0 13.2161 0 12.25V4.79792C0 4.61562 0.144727 4.51354 0.246289 4.62656C0.815039 5.26094 1.56914 6.06667 4.15898 8.76823C4.69473 9.32969 5.59863 10.5109 6.5 10.5036C7.40645 10.5146 8.32812 9.30781 8.84355 8.76823C11.4334 6.06667 12.185 5.25729 12.7537 4.62292ZM6.5 9.33333C7.08906 9.34792 7.93711 8.26875 8.36367 7.82396C11.733 4.31302 11.9895 4.00677 12.7664 3.13177C12.9137 2.96771 13 2.7125 13 2.44271V1.75C13 0.783854 12.4541 0 11.7812 0H1.21875C0.545898 0 0 0.783854 0 1.75V2.44271C0 2.7125 0.0863281 2.96406 0.233594 3.13177C1.01055 4.00312 1.26699 4.31302 4.63633 7.82396C5.06289 8.26875 5.91094 9.34792 6.5 9.33333Z"
+                          fill="black" />
+                      </svg>
+                    </span>
+                  </div>
+
+
+                  <input class="form-control db" formControlName="email"
+                    [ngClass]="{'is-invalid': (submitted || registerForm.controls['email'].dirty) && registerForm.controls['email'].errors}" type="email">
+                </div>
+                <div *ngIf="(submitted || registerForm.controls['email'].dirty)  && registerForm.controls['email'].errors" class="text-danger">
+                  <div *ngIf="(submitted || registerForm.controls['email'].dirty)  && registerForm.controls['email'].errors['required']">
+                    L' email est requis
+                  </div>
+                  <div *ngIf="registerForm.controls['email'].dirty && registerForm.controls['email'].errors['email'] && registerForm.controls['email'].errors['pattern']">
+                    L'email n'est pas valide
+                  </div>
+                </div>
+              </div>
+              <label for="email">Mot de passe</label>
+              <div class="form-group">
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend  " style=" border-left-width: none;"
+                    [ngClass]="{'invalid':(submitted || registerForm.controls['password'].dirty )&& registerForm.controls['password'].errors}" type="email">
+                    <span class=" bd "><svg width="13" height="25" viewBox="0 0 13 14" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M12.5 10.5H4.75V6.27132C4.75 4.6471 5.74063 3.29769 6.97813 3.28128C8.22812 3.26488 9.25 4.59788 9.25 6.2344V6.89065C9.25 7.43616 9.58438 7.87503 10 7.87503H11C11.4156 7.87503 11.75 7.43616 11.75 6.89065V6.2344C11.75 2.7891 9.60938 -0.0122643 6.98438 4.03806e-05C4.35938 0.012345 2.25 2.85062 2.25 6.29593V10.5H1.5C0.671875 10.5 0 11.3819 0 12.4688V19.0313C0 20.1182 0.671875 21 1.5 21H12.5C13.3281 21 14 20.1182 14 19.0313V12.4688C14 11.3819 13.3281 10.5 12.5 10.5ZM8.25 16.7344C8.25 17.6408 7.69063 18.375 7 18.375C6.30937 18.375 5.75 17.6408 5.75 16.7344V14.7656C5.75 13.8592 6.30937 13.125 7 13.125C7.69063 13.125 8.25 13.8592 8.25 14.7656V16.7344Z"
+                          fill="black" />
+                      </svg>
+                    </span>
+                  </div>
+                  <input class="form-control db" formControlName="password"
+                    [ngClass]="{'is-invalid':(submitted || registerForm.controls['password'].dirty ) &&registerForm.controls['password'].errors}" type="password">
+
+                </div>
+                <div *ngIf="(submitted || registerForm.controls['password'].dirty ) && registerForm.controls['password'].errors" class="text-danger">
+                  <div *ngIf="(submitted || registerForm.controls['password'].dirty ) && registerForm.controls['password'].errors['required']">
+                    Le mot de passe est requis
+                  </div>
+                  <div *ngIf="(submitted || registerForm.controls['password'].dirty ) &&registerForm.controls['password'].errors['minlength']">
+                    Le mot de passe doit contenir 5 caractères
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn boutton my-4">se connecter</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>

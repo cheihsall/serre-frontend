@@ -1,0 +1,38 @@
+.card-title{
+    color:#91D333;
+    
+}
+.card{
+    background-color: #3A3A3A;
+}
+
+.content {
+    opacity: 0;
+    font-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color:white;
+    background-color: rgba(22, 20, 20, 0.5);
+    width: 300px;
+    height: 200px;
+    -webkit-transition: all 400ms ease-out;
+    -moz-transition: all 400ms ease-out;
+    -o-transition: all 400ms ease-out;
+    -ms-transition: all 400ms ease-out;
+    transition: all 400ms ease-out;
+    text-align: center;
+  }
+  .active .content:hover {
+    opacity: 1;
+  }
+ 
+ .active:hover img
+ {
+  opacity: 1;
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+  content: 'Text affiche lors du hover';
+}  
