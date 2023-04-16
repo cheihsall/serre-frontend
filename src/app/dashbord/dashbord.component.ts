@@ -77,9 +77,11 @@ this.router.navigateByUrl('/')
 
         }
         });
+         this.filter_entree = [{"temperature":35, "humidite":"20","humidite_sol":12,"lumiere":14},]
         this.UserService.realtime().subscribe({
           next:(data:any)=>{
-          this.filter_entree = [data]
+          //this.filter_entree = [data]
+
 
           }
         })

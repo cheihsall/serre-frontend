@@ -1,7 +1,8 @@
-<div class="d-flex" style="min-height: 100vh;  filter: contrast(120%);">
+<div class="d-flex" style="height: 100%; width: 100%;  filter: contrast(120%);">
   <!-- SIDEBAR -->
+
   <aside title="logo"  class="p" style="height: 100vh; width: 15%; background-color: #3a3a3a;">
-      <svg style="margin-top: 10%;"  width="250" height="120" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <svg style="margin-top: 10%;"  width="80%" height="15%" viewBox="0 0 86 86" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <circle cx="43" cy="43" r="42.5" fill="url(#pattern0)" stroke="#91D333"/>
           <defs>
           <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -12,23 +13,22 @@
           </svg>
  <h2 style="color: #91D333; margin-top: 12%; text-align: center;">{{identifiant}}</h2>
 
- <button type="button" class="btn e card-title rounded-4 col-md-10" routerLinkActive="active" style="margin-left: 7.5%;  margin-top: 34%;" data-bs-toggle="button"><a  [routerLink]="['systeme']" class="dropdown-item " ><img src="./assets/kkk-removebg-preview.png" style="width: 30px; height: 30px; margin-top: 3px; float: left;" alt="" srcset=""> <span style="font-size: 1.5rem; ">Dashboard</span></a> </button>
+ <button type="button" class="btn e card-title rounded-4 col-md-10" routerLinkActive="active" style="margin-left: 7.5%;  margin-top: 34%;" data-bs-toggle="button"><a  [routerLink]="['systeme']" class="dropdown-item " ><img src="./assets/kkk-removebg-preview.png" style="width: 15%; height: 90%; margin-top: 5%; float: left;" alt="" srcset=""> <span style="font-size: 70%; ">Dashboard</span></a> </button>
 
- <button type="button" class="btn e card-title rounded-4  col-md-10" routerLinkActive="active" style="margin-left: 7.5%;  margin-top: 15%;" data-bs-toggle="button"><a  [routerLink]="['historique']"class="dropdown-item " ><img src="./assets/mmma-removebg-preview.png" style="width: 30px; height: 30px; margin-top: 3px; float: left;" alt="" srcset=""> <span style="font-size: 24px; ">Historique</span></a> </button>
- <button type="button" class="btn e card-title rounded-4 col-md-10 " style="margin-left: 7.5%; margin-top: 15%;" data-bs-toggle="modal" data-bs-target="#modalRegisterForm"> <img src="./assets/profilmodif-removebg-preview.png" style="width: 30px; height: 30px; margin-top: 3px; float: left;" alt="" srcset="">
-  <span style="font-size: 24px;">Modifier Profil</span></button>
- <button type="button" class="btn e card-title rounded-4  col-md-10" routerLinkActive="active" style="margin-left: 7.5%; margin-top: 15%;"  data-bs-toggle="button"><a  [routerLink]="['map']" class="dropdown-item " ><img src=" ./assets/localisation-removebg-preview.png" alt="" style="width: 30px; height: 30px;margin-top: 3px;float: left;" srcset=""> <span style="font-size: 24px;">Géolocalisation</span></a> </button>
+ <button type="button" class="btn e card-title rounded-4  col-md-10" routerLinkActive="active" style="margin-left: 7.5%;  margin-top: 15%;" data-bs-toggle="button"><a  [routerLink]="['historique']"class="dropdown-item " ><img src="./assets/mmma-removebg-preview.png"  style="width: 15%; height: 90%; margin-top: 5%; float: left;" alt="" srcset=""> <span style="font-size: 70%; ">Historique</span></a> </button>
+ <button type="button" class="btn e card-title rounded-4 col-md-10 " style="margin-left: 7.5%; margin-top: 15%;" data-bs-toggle="modal" data-bs-target="#modalRegisterForm"> <img src="./assets/profilmodif-removebg-preview.png"  style="width: 15%; height: 90%; margin-top: 5%; float: left;" alt="" srcset=""> <span style="font-size: 70%; ">Modifier Profil</span></button>
+ <button type="button" class="btn e card-title rounded-4  col-md-10" routerLinkActive="active" style="margin-left: 7.5%; margin-top: 15%;"  data-bs-toggle="button"><a  [routerLink]="['map']" class="dropdown-item " ><img src=" ./assets/localisation-removebg-preview.png" alt=""  style="width: 15%; height: 90%; margin-top: 5%; float: left;" alt="" srcset=""> <span style="font-size: 70%; ">Géolocalisation</span></a> </button>
   </aside>
   <!-- /SIDEBAR -->
-  <main class=" d-flex flex-column " style="height: 100vh; width: 85%; ">
+  <main class=" d-flex flex-column " style="height: 100%; width: 85%; ">
       <header style="height: 10%;width:100%; background-color: #3a3a3a; " class="  ">
 
-   <h2 style=" color: aliceblue;  margin-left: 40%;"  class="mt-4"  >TABLEAU DE BORD
+   <h2 style=" color: aliceblue; font-size: 90%; margin-left: 40%;"  class="mt-4"  >TABLEAU DE BORD
 
 
           <div style="float: right;"  >
             <a (click)="destroy()" title="Deconnexion">
-      <svg width="25" height="30" class="mb-12" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg width="10%" height="10%" class="mb-12" viewBox="0 0 25 19" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M24.2676 10.2061L16.0645 18.4092C15.332 19.1417 14.0625 18.629 14.0625 17.5792V12.8917H7.42188C6.77246 12.8917 6.25 12.3692 6.25 11.7198V7.03229C6.25 6.38287 6.77246 5.86041 7.42188 5.86041H14.0625V1.17291C14.0625 0.127992 15.3271 -0.389587 16.0645 0.342835L24.2676 8.54596C24.7217 9.00494 24.7217 9.74713 24.2676 10.2061ZM9.375 18.1651V16.212C9.375 15.8897 9.11133 15.626 8.78906 15.626H4.6875C3.82324 15.626 3.125 14.9278 3.125 14.0635V4.68854C3.125 3.82428 3.82324 3.12604 4.6875 3.12604H8.78906C9.11133 3.12604 9.375 2.86237 9.375 2.5401V0.586976C9.375 0.26471 9.11133 0.0010385 8.78906 0.0010385H4.6875C2.09961 0.0010385 0 2.10065 0 4.68854V14.0635C0 16.6514 2.09961 18.751 4.6875 18.751H8.78906C9.11133 18.751 9.375 18.4874 9.375 18.1651Z" fill="#91D333"/>
           </svg>
           </a>
@@ -40,17 +40,17 @@
       </header>
       <section class=" p "  style="display: flex; flex-direction: column;  width: 100%;height: 30%;">
 
-          <div class="  d-flex justify-content-center  gap-4  mb-3 "  style=" height: 15rem; margin-top: 2rem; margin-right: 12%; margin-left: 9%;" >
-              <div class="card rounded-4" style="width: 16rem;  height: 13rem;  background-color: #91D333;" >
+          <div class="  d-flex justify-content-center  gap-4  mb-3 "  style=" height: 100%; margin-top: 2rem; margin-right: 12%; margin-left: 9%;" >
+              <div class="card rounded-4" style="width: 100%; height: 87%;  background-color: #91D333;" >
                   <div class=" d-flex flex-column gap-4 "  >
                   <div  class="card-title  colorr p-2 rounded-4 d-flex justify-content-center" style="background-color: #3a3a3a;">
 
-                     <img src="./assets/temperature-removebg-preview.png" alt="" style="width: 3rem; height: 3rem;" srcset="">
+                     <img src="./assets/temperature-removebg-preview.png" alt="" style="width:  3%;" srcset="">
 
 
 
 
-                          <span style="color: #91D333; font-size: 2rem;">Temperature</span>
+                          <span style="color: #91D333; font-size: 100%;">Temperature</span>
 
                   </div>
                   <div class="d-flex justify-content-center gap-2" style="margin-top: 5px;"*ngFor="let periode of filter_entree">
@@ -63,13 +63,13 @@
 
                   </div>
                 </div>
-                <div class="card rounded-4" style="width: 16rem; height: 13rem; background-color: #91D333;" >
+                <div class="card rounded-4" style="width: 100%; height: 87%; background-color: #91D333;" >
                   <div class=" d-flex flex-column gap-4" >
                   <div class="card-title  colorr p-2 rounded-4 d-flex " style="background-color: #3a3a3a;">
 
-                     <img src="./assets/humidity-removebg-preview (1).png" style="width: 3rem; height: 3rem; top: 12px;" alt="" srcset="">
+                     <img src="./assets/humidity-removebg-preview (1).png" style="width:  10%; height:  90%; top: 12px;" alt="" srcset="">
 
-                          <span style="color: #91D333; font-size: 2rem;">HUMIDITÉ</span>
+                          <span style="color: #91D333; font-size:  100%;">HUMIDITÉ</span>
 
                   </div>
                   <div class="d-flex justify-content-center  gap-4" style="margin-top: -30px;" *ngFor="let periode of filter_entree" >
@@ -83,12 +83,12 @@
                 <p class="d-flex justify-content-center text-danger" *ngIf="periode.humidite == 0 || periode.humidite_sol == 0">erreur: verifier le capteur</p></span>
                   </div>
                 </div>
-                <div class="card rounded-4" style="width: 16rem;  height: 13rem;  background-color: #91D333;" >
+                <div class="card rounded-4" style="width: 100%; height: 87%;  background-color: #91D333;" >
                   <div class=" d-flex flex-column gap-4"  >
                   <div class="card-title  colorr p-2 rounded-4 d-flex justify-content-center" style="background-color: #3a3a3a;">
-                    <img src="./assets/svgviewer-png-output (4).png" style="width: 3rem; height: 3rem;" alt="" srcset="">
+                    <img src="./assets/svgviewer-png-output (4).png" style="width:  10%; height:  90%;" alt="" srcset="">
 
-                          <span style="color: #91D333; font-size: 1.8rem;">LUMINOSITÉ</span>
+                          <span style="color: #91D333; font-size:  90%;">LUMINOSITÉ</span>
 
                   </div>
                   <div class="d-flex justify-content-center gap-2" style="margin-top: 5px;" *ngFor="let periode of filter_entree">
@@ -101,7 +101,7 @@
                 <div class=" d-flex">
 
 
-             <img src="./assets/svgviewer-png-output.png" alt="" style="width: 25rem; height: 13rem; margin-left: 60px;  border-radius: 1rem;"  srcset="">
+             <img src="./assets/svgviewer-png-output.png" alt="" style="width: 100%; height: 87%; margin-left: 60px;  border-radius: 1rem;"  srcset="">
 
                 </div>
           </div>
